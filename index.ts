@@ -9,7 +9,7 @@ class Heatmap{
     this.canvas.createCanvas();
     this.canvas.setContext();
     console.log(this.canvas);
-    document.getElementById("app").appendChild(this.canvas.element);
+    document.getElementById("app").appendChild(this.canvas.canvasElement);
     
   }
 
