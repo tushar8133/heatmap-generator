@@ -23,4 +23,9 @@ export class Canvas {
     this.contextElement.fillStyle = "grey";
     this.contextElement.fillRect(0, 0, 20, 20);
   }
+
+  reset() {
+    // this.mainCanvasMulti.width = this.mainCanvas.width;
+    // this.mainCanvasMulti.height = this.mainCanvas.height;
+  }
 }

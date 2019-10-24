@@ -1,14 +1,16 @@
 import { Canvas } from "./Canvas";
 
-export class Heatmap extends Canvas{
+export class Heatmap extends Canvas {
+  reset() {
+    this.contextElement.clearRect(0, 0, this.width, this.height);
+  }
 
-reset() {
-    // this.mainCanvasMulti.getContext("2d").clearRect(0, 0, this.mainCanvasMulti.width, this.mainCanvasMulti.height);
-    // this.mainCanvasMulti.width = this.mainCanvas.width;
-    // this.mainCanvasMulti.height = this.mainCanvas.height;
-}
-
-draw() {
+  draw() {
+    this.contextElement = this.canvasElement.getContext("2d");
+    // this.contextElement.fillStyle = "#000000";
+    // this.contextElement.fillRect(0, 0, 200, 200);
+    this.contextElement.fillStyle = "green";
+    this.contextElement.fillRect(50, 50, 20, 20);
     // this.drawCanvas();
     // this.resetCanvasMultiColored();
     // this.mainCanvasMulti.style.opacity = this.canvasParams.globalOpacity/100;
@@ -26,6 +28,5 @@ draw() {
     //     data[i + 3] = (hslOpacity < (-0.3)) ? opacity : 0;
     // }
     // context.putImageData(imageData, 0, 0);
-}
-
+  }
 }
