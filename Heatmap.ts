@@ -7,8 +7,8 @@ export class Heatmap extends Canvas {
 
   draw() {
     this.contextElement = this.canvasElement.getContext("2d");
-    // this.contextElement.fillStyle = "#000000";
-    // this.contextElement.fillRect(0, 0, 200, 200);
+    this.contextElement.fillStyle = "#000000";
+    this.contextElement.fillRect(0, 0, this.width, this.height);
     this.contextElement.fillStyle = "green";
     this.contextElement.fillRect(50, 50, 20, 20);
     // this.drawCanvas();
