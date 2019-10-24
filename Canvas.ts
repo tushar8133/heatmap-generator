@@ -1,6 +1,6 @@
 export class Canvas {
   canvasElement: HTMLCanvasElement;
-  context: CanvasRenderingContext2D;
+  contextElement: CanvasRenderingContext2D;
   contextData: Object;
   height: number;
   width: number;
@@ -17,10 +17,10 @@ export class Canvas {
   }
 
   setContext() {
-    this.context = this.canvasElement.getContext("2d");
-    this.context.fillStyle = "#000000";
-    this.context.fillRect(0, 0, 200, 200);
-    this.context.fillStyle = "grey";
-    this.context.fillRect(0, 0, 20, 20);
+    this.contextElement = this.canvasElement.getContext("2d");
+    this.contextElement.fillStyle = "#000000";
+    this.contextElement.fillRect(0, 0, 200, 200);
+    this.contextElement.fillStyle = "grey";
+    this.contextElement.fillRect(0, 0, 20, 20);
   }
 }
