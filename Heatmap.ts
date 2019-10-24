@@ -1,7 +1,7 @@
 import { Canvas } from "./Canvas";
 
 export class Heatmap extends Canvas {
-  reset() {
+  resetContext() {
     this.contextElement.clearRect(0, 0, this.width, this.height);
   }
 
