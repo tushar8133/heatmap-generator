@@ -1,18 +1,8 @@
 import { Canvas } from "./Canvas";
+import { Heatmap } from "./Heatmap";
 
-class Heatmap{
-
-  canvas:Canvas;
-
-  constructor(){
-    this.canvas = new Canvas(200, 200);
-    this.canvas.createCanvas();
-    this.canvas.setContext();
-    console.log(this.canvas);
-    document.getElementById("app").appendChild(this.canvas.canvasElement);
-    
-  }
-
-}
-
-var aa = new Heatmap();
+var heatmap = new Heatmap(200, 200);
+heatmap.createCanvas();
+heatmap.setContext();
+heatmap.draw();
+document.getElementById("app").appendChild(heatmap.canvasElement);
