@@ -1,4 +1,4 @@
-import { Canvas } from "./Canvas";
+import { Canvas } from "./canvas";
 
 export class Heatmap extends Canvas {
   resetContext() {
