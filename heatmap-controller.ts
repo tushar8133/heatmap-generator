@@ -6,7 +6,7 @@ export class HeatmapController {
   initControls(){
     var slider1:HTMLElement = document.getElementById("slider1");
     slider1.addEventListener("input", (event) => {
-      console.log(event.target);
+      console.log(event.target.value);
     });
   }
 }

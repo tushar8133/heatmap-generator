@@ -1,16 +1,20 @@
 import { Canvas } from "./canvas";
 
 export class Heatmap extends Canvas {
+  inc = 0;
   resetContext() {
     this.contextElement.clearRect(0, 0, this.width, this.height);
   }
 
+  updateData(){
+    this.inc = document.getElementById("slider1").value;
+  }
+
   draw() {
-    this.contextElement = this.canvasElement.getContext("2d");
     this.contextElement.fillStyle = "#000000";
     this.contextElement.fillRect(0, 0, this.width, this.height);
     this.contextElement.fillStyle = "green";
-    this.contextElement.fillRect(50, 50, 20, 20);
+    this.contextElement.fillRect(this.inc, this.inc, this.inc, this.inc);
     // this.drawCanvas();
     // this.resetCanvasMultiColored();
     // this.mainCanvasMulti.style.opacity = this.canvasParams.globalOpacity/100;

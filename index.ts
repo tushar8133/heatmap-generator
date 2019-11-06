@@ -1,13 +1,10 @@
 import { Heatmap } from "./heatmap";
 import { HeatmapController } from './heatmap-controller';
-import { Frames } from './frames';
+import { Timer } from './timer';
 
 var heatmap = new Heatmap(200, 200);
 heatmap.createCanvas();
 document.getElementById("app").appendChild(heatmap.canvasElement);
-// heatmap.draw()
-
 
 var heatmapController:HeatmapController = new HeatmapController();
-var frames:Frames = new Frames();
-frames.start(heatmap);
+var timer = new Timer(heatmap);
