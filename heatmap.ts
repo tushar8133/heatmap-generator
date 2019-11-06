@@ -6,7 +6,7 @@ export class Heatmap extends Canvas {
     this.contextElement.clearRect(0, 0, this.width, this.height);
   }
 
-  updateData(){
+  getData(){
     this.inc = document.getElementById("slider1").value;
   }
 

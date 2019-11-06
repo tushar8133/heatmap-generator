@@ -9,7 +9,7 @@ export class Timer {
 
   main(){
     this.contextObj.resetContext();
-    this.contextObj.updateData();
+    this.contextObj.getData();
     this.contextObj.draw();
 
     requestAnimationFrame( () => {
